@@ -20,6 +20,6 @@ class Skill extends Model
 
     public function projects(): BelongsToMany
     {
-        return $this->belongToMany(Project::class);
+        return $this->belongToMany(Project::class, 'project_skills');
     }
 }

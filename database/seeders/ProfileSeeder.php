@@ -13,7 +13,7 @@ class ProfileSeeder extends Seeder
      */
     public function run(): void
     {
-        Profile::firstOnCreate([], [
+        Profile::firstOrCreate([], [
             'name' => 'Syahputra Tirta Wijaya',
             'headline' => 'Fresh Graduate Full-Stack Developer',
             'bio' => 'Lulusan D3 Teknologi Informasi, Universitas Brawijaya, Fokus di pegembangan web pakai Laravel dan Tailwind CSS.',
