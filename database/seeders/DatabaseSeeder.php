@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 use App\Models\User;
 use Database\Seeders\ProfileSeeder;
+use Database\Seeders\ProjectSeeder;
+use Database\Seeders\SkillSeeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -25,6 +27,8 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             ProfileSeeder::class,
+            SkillSeeder::class,
+            ProjectSeeder::class,
         ]);
     }
 }
