@@ -12,7 +12,7 @@ class HomeController extends Controller
     public function index()
     {
         $profile = Profile::first();
-        $skills = Skill::orderBy('sort_order')->get();
+        $skills = Skill::orderBy('sort_order')->get()->groupBy('category');
         $featuredProjects = Project::where('is_featured', true)
             ->orderBy('sort_order')
             ->take(6)
