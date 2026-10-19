@@ -13,7 +13,8 @@ class HomeController extends Controller
     {
         $profile = Profile::first();
         $skills = Skill::orderBy('sort_order')->get()->groupBy('category');
-        $featuredProjects = Project::where('is_featured', true)
+        $featuredProjects = Project::with('skills')
+            ->where('is_featured', true)
             ->orderBy('sort_order')
             ->take(6)
             ->get();
